@@ -10,7 +10,8 @@ body {
   color:  white;
   margin: 0;
 }
-ul {
+
+.flex-nav{
   display: flex;
   justify-content: space-between;
 
@@ -48,14 +49,15 @@ header {
   background-color: rgb(19, 19, 71);
   font-family: 'Press Start 2P', cursive;
   text-align: center;
+  float: left 10%;
 }
 main {
   background-color: rgb(19, 19, 71);
   font-family: 'Kelly Slab', cursive;
 }
-img {
-  margin-left: 20px;
-}
 .wrapper {
   margin-left: 30px;
+}
+.logo{
+  margin-left: 20px;
 }
