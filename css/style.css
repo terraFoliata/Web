@@ -61,3 +61,15 @@ main {
 .logo{
   margin-left: 20px;
 }
+.flex-competitions{
+  display: flex;
+  width: 30%;
+  align-items: center;
+  text-align: center;
+  font-style: italic;
+  font-size: smaller;
+  text-indent: 0;
+  margin-top: 50px;
+
+}
+
