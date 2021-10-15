@@ -1,27 +1,24 @@
-*,
-* ::before,
-* ::after {
-  box-sizing: border-box;
-}
+
 body {
   font-family: 'Kelly Slab', cursive;
   font-size: 15px;
   line-height: 1.6;
   color:  white;
-  margin: 0;
+  margin: 0px;
+  background-color: rgb(6, 6, 39);
+
 }
 
 .flex-nav{
   display: flex;
   justify-content: space-between;
-
-  background-color: rgb(19, 19, 71);
-  color: rgb(107, 109, 235); 
+  background-color: rgb(6, 6, 39);
+  color: rgb(255, 255, 255); 
   align-items: center;
   list-style-type: "| ";
-  margin-top: 0;
+  margin-top: 0px;
 }
-a {
+.a-underline {
 	position: relative;
   margin-right: 10px;
 	color: #ffffff; 
@@ -30,7 +27,7 @@ a {
 	text-decoration: none; 
   font-size: 20px;
 }
-a:after {
+.a-underline:after {
 	display: block;
 	position: absolute;
 	left: 0; 
@@ -40,36 +37,132 @@ a:after {
 	content: "";
 	transition: width 0.3s ease-out; 
 }
-
-a:hover:after,
-a:focus:after {
+.a-underline:hover:after,
+.a-underline:focus:after {
 	width: 100%; 
 }
 header {
-  background-color: rgb(19, 19, 71);
+  padding: 150px;
+  background: center center / cover no-repeat url(/images/wpapers_ru_Ð¢ÐµÐ¼Ð½Ð°Ñ-Ð°Ð±ÑÑÑÐ°ÐºÑÐ¸Ñ.jpg);
   font-family: 'Press Start 2P', cursive;
   text-align: center;
   float: left 10%;
+  max-width: 1200px;
+  background-size: cover;
+  background-color: rgb(6, 6, 39);
+  margin: 0px auto;
 }
 main {
-  background-color: rgb(19, 19, 71);
+  background-color: rgb(6, 6, 39);
   font-family: 'Kelly Slab', cursive;
-}
-.wrapper {
-  margin-left: 30px;
+  margin: 0px auto;
 }
 .logo{
-  margin-left: 20px;
+  width: 70px;
+  height: 70px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  position: relative;
 }
 .flex-competitions{
+  padding-top: 40px;
+  padding-bottom: 40px;
   display: flex;
-  width: 30%;
+  justify-content: space-between;
   align-items: center;
+  margin-left: 25px;
+}
+.com-img{
+  height: 100px;
+  width: 100px;
+  margin-left: 10px;
+}
+.titles{
   text-align: center;
-  font-style: italic;
-  font-size: smaller;
-  text-indent: 0;
-  margin-top: 50px;
+}
+.button{
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+button{
+  background-color: white;
+  color: black;
+  border: 3px solid rgb(38, 50, 102);
+  cursor: pointer;
+  padding: 8px;
+  text-align: center;
+  font-size: 20px;
+  outline: none;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-left: 15px;
+}
+.wrapper-2{
+  margin-left: 150px;
+}
+.serv-main{
+  background-color: #ffffff;
+  color: black;
+}
+.serv{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.serv-l{
+  width: 50%;
+  font-size: 20px;
+}
+.serv-r{
+  width: 45%;
+  font-size: 20px;
+}
+.about_me-flex{
+  background-color: #ffffff;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+  margin: 0px auto;
+}
+.index-img{  
+  height: 230px;
+  width: 230px;
+  margin-top: 5%;
+}
+footer{
+  margin-top: 30px;
+  background-color: white;
+  color: black;
+}
+.summary-main{
 
 }
+.summary-table{
+
+}
+table {
+  border-top: 3px solid grey;
+  margin: auto;
+}
+td {
+  border-bottom: 1px solid grey;
+  font-size: 20px;
+  border-spacing: 0px;
+  text-align: center;
+  margin-top: 10px;
+}
+
 
