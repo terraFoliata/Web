@@ -164,5 +164,42 @@ td {
   text-align: center;
   margin-top: 10px;
 }
-
+.about_me-flex2{
+  background-color: rgb(6, 6, 39);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10px;
+  margin: 0px auto;
+}
+.contacts-flex-1{
+  display: flex;
+  width: 50%;
+  box-sizing: border-box;
+  flex-direction: column;
+  margin-right: 40px;
+}
+.contacts-flex{
+  margin-top: 100px;
+  background-color: #ffffff;
+  color: black;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
+  margin: 0px auto;
+}
+.txt{
+  padding: 5px;
+  font-size: 20px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  z-index: 100;
+}
+.txtarea{
+  padding: 5px;
+  
+}
 
