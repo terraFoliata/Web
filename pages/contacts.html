@@ -8,65 +8,74 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
 <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Kelly+Slab&family=Press+Start+2P&display=swap" rel="stylesheet">
-
 </head>
 <body>
     <nav>
         <ul class="flex-nav">
+            <img class="logo" src="../images/logo.png" width = "200" alt="логотип">
             <li>
-                <a href="../pages/index.html">
-                    <img src="../images/logo_kukech.jpg" width="200" alt="логотип">
-                </a>
-            </li>
-            <li>
-                <a href="../index.html">
+                <a class="a-underline" href="/index.html">
                     О себе
                 </a>
             </li>
             <li>
-                <a href="../pages/competencies.html">
+                <a class="a-underline" href="/pages/competencies.html">
                    Компетенции
                 </a>
             </li>
             <li>
-                <a href="../pages/summary.html">
+                <a class="a-underline" href="../pages/summary.html">
                     Резюме
                 </a>
             </li>
             <li>
-                <a href="../pages/portfolio.html">
+                <a class="a-underline" href="../pages/portfolio.html">
                     Портфолио
                 </a>
             </li>
             <li>
-                <a href="../pages/contacts.html">
+                <a class="a-underline" href="../pages/contacts.html">
                     Контакты
                 </a>
             </li>
         </ul>
     </nav>
         <header>
-            <h2>Веб-технологии</h2>
+            <div class="wrapper-2">
+                <h1>Веб-технологии</h1>
+            </div>
         </header>
         <main>
-            <h1>Мои контакты</h1>
-            <div>
-                Почта: <a href="mailto:alsv.20@uni-dubna.ru">alsv.20@uni-dubna.ru</a>
+            <h2 class="titles">Мои контакты</h2>
+            <div class="wrapper">
+                Почта: <a href="mailto:alsv.20@uni-dubna.ru" style="color: white;">alsv.20@uni-dubna.ru</a>
             </div>
-            <div>
+            <div class="wrapper">
                 Тел: <span class="ya-phone">
-                    <a href="tel:+79295083090">89295083090</a>
+                    <a href="tel:+79295083090" style="color: white;">89295083090</a>
                 </span>
             </div>
-            <div id="inline">
-                <h2>Онлайн заявка</h2>
+            <div>
                 <form id="contact" action="#" method="post" name="contact">
-                    <div><input id="name" class="txt" name="name" type="name" placeholder="имя"></div>
-                    <div><input id="phone" class="txt" name="phone" type="phone" placeholder="телефон"></div>
-                    <div><input id="email" class="txt" name="email" type="email" placeholder="почта"></div>
-                    <div><textarea id="msg" class="txtarea" name="msg" placeholder="сообщение"></textarea></div>
-                 <button id="send">Отправить</button>
-            </form>
+                    <h2 class="titles">Онлайн заявка</h2>
+                    <div class="contacts-flex">
+                        <div>
+                            <div><input id="name" class="txt" name="name" type="name" placeholder="имя"></div>
+                            <div><input id="phone" class="txt" name="phone" type="phone" placeholder="телефон"></div>        
+                        </div>
+                        <div>
+                            <div><input id="email" class="txt" name="email" type="email" placeholder="почта"></div>
+                            <div><textarea id="msg" class="txt" name="msg" placeholder="сообщение"></textarea></div>        
+                        </div>
+                    </div>
+                    <div>
+                        <a class="button" href="/pages/competencies.html">
+                            <button id="send">
+                            Отправить
+                            </button>
+                        </a>
+                    </div>
+                </form>
             </div>
         </main>
         <footer>
