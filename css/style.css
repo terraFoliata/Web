@@ -147,12 +147,6 @@ footer{
   background-color: white;
   color: black;
 }
-.summary-main{
-
-}
-.summary-table{
-
-}
 table {
   border-top: 3px solid grey;
   margin: auto;
@@ -198,8 +192,5 @@ td {
   border-radius: 5px;
   z-index: 100;
 }
-.txtarea{
-  padding: 5px;
-  
-}
+
 
