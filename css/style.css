@@ -192,5 +192,12 @@ td {
   border-radius: 5px;
   z-index: 100;
 }
-
-
+.block-choice{
+  background-color: white;
+  display: flex; flex-direction: row;
+  justify-content: space-between;
+}
+.theme{
+  color: black; 
+  margin-left: auto;
+}
