@@ -51,8 +51,8 @@
                 <h1>Веб-технологии</h1>
             </div>
         </header>
-        <main>
-            <div class="block-choice">
+        <main id="mainCol" style="background-color: white;">
+            <div id="qwe" class="block-choice">
                 <div class="wrapper" style="color: black;">
                     <input style="margin-top: 20px;" type="checkbox"checked> <label for="">Форма</label><br>
                     <input type="checkbox"checked> <label for="">Диаграмма</label><br>
@@ -62,23 +62,132 @@
                     <input style="margin-bottom: 20px;" type="checkbox"checked> <label for="">Фотогалерея</label><br>
                 </div>
                 <div class="wrapper theme">
-                    <h1>Тема сайта:</h1>
-                    <input type="radio" id="dark" checked> <label for="dark">Светлая</label><br>
-                    <input type="radio" id="light"> <label for="light">Тёмная</label><br>
+                    <script>
+                        function ChangeColor (choice) {
+                            var main = document.getElementById('qwe');
+                            if(choice.id == 'dark' && choice.checked){
+                                main.style.backgroundColor = rgb(0,19,42);
+                            } else if (choice.id == 'light' && choice.checked){
+                                main.style.backgroundColor = 'white';
+                            }
+                        }
+                    </script>
+                    <h1>Тема страницы:</h1>
+                    <label for="light"><input name="theme" type="radio" id="light" checked value="1" onchange="ChangeColor(this)">Светлая</label><br>
+                    <label for="dark"><input name="theme" type="radio" id="dark" value="1" onchange="ChangeColor(this)">Тёмная</label><br>
+                    
+                </div>
+                
+            </div>
+            <div class="grid-container">
+                <div class="main-form"  style="background-color: white; color: black;">
+                    <script>
+                        function f(){
+                          name = document.reg.YourName.value;
+                          mail = document.reg.Mail.value;
+                          phone = document.reg.Phone.value;
+                          console.log(name + " " + mail + " " + phone);
+                          for(i = 0; i < document.reg.question.length; i++){
+                            if(document.reg.question[i].checked){
+                              question = document.reg.question[i].value;
+                            }
+                          }
+                          console.log(question);
+                        }
+                        var mailing_console = false;
+                        var mailing = document.reg.mailing.checked;
+                        if (document.mailing.checked){
+                          mailing = document.reg.mailing.value;
+                        }
+                        console.log(mailing_console);
+                        
+                      </script>
+                    <form action="javascript:f()" method="GET" name="reg" class="border"> 
+                        <div class="flex-b"> 
+                          Как вам удобно получить ответ: <br> 
+                        <input name="question" class="input-bg" type="radio" id="contactChoice1" 
+                        name="contact" value="email"> 
+                        <label for="contactChoice1">По почте</label> 
+                        
+                        <input name="question" class="input-bg" type="radio" id="contactChoice2" 
+                        name="contact" value="phone"> 
+                        <label for="contactChoice2">По телефону</label> 
+                        
+                        <input name="question" class="input-bg" type="radio" id="contactChoice3" 
+                        name="contact" value="another"> 
+                        <label for="contactChoice3">по-другому</label> 
+                        </div> 
+                        Укажите тему вопроса <br> 
+                        <select class="input-bg" name="обратная связь" id="1337"> 
+                        <option value="1"> 
+                        работа 
+                        </option> 
+                        <option value="2"> 
+                        учёба 
+                        </option> 
+                        <option value="3"> 
+                        баг 
+                        </option> 
+                        </select><br>
+                        <label for="mailing">Подписаться на рассылку
+                          <input type="checkbox" id="mailing" name="mailing" value="mailing_true" checked>
+                        </label><br>
+                        <p><b>И ещё один вопрос</b></p> 
+                        <p><input type="checkbox" name="option1" value="a1">может так<Br> 
+                        <input class="input-bg" type="checkbox" name="option2" value="a2">или не так<Br> 
+                        <input class="input-bg" type="checkbox" name="option3" value="a3">иначе<Br> 
+                        <p>Ваше имя: <input name="YourName" class="input-bg" type="text"></p> 
+                        <p>Адрес почты: <input name="Mail" class="input-bg" type="email"></p> 
+                        <p>Телефон: <input name="Phone" class="input-bg" type="text"></p> 
+                        <p>Ваш вопрос:</p> 
+                        <p><input class="input-bg" type="text"></p> 
+                        <p><input class="input-bg" type="submit" value="Отправить"></p> 
+                        </form>
+                </div>
+                <div class="main-form" style="background-color: white; color: black;">
+                    <textarea name="" id="textArea" cols="57" rows="30"></textarea><br>
+                    <button style="position:relative; left: 40%">Кнопка</button>
+                    <script>
+                        document.getElementById('textArea').oninput=function text(){
+                            //alert(textArea.value);
+                            localStorage.setItem('savetext', document.getElementById('textArea').value);
+                            console.log(localStorage.getItem('savetext'));
+                        }
+                        document.getElementById('textArea').value = localStorage.getItem('savetext');
+                    </script>
+                </div>
+                <div class="serv main-form" style="background-color: white; color: black; align-items: flex-start; margin: auto;">
+                    <div style="margin-right: 15px">
+                        <p>
+                            Следует отметить, что выбранный нами инновационный путь напрямую зависит от экономической целесообразности принимаемых изменений. Разнообразный и богатый опыт высокотехнологичная концепция общественной системы позволяет выполнять важные задания по разработке укрепления демократической системы. 
+
+                        </p>
+                    </div>
+                    <div style="margin: auto">
+                        <img class="index-img" src="/images/pic8.jpeg" alt="">
+                    </div>
+                </div>
+                <div class="main-form" style="background-color: white; color: black;">
+                    
+                </div>
+                <div class="main-form" style="background-color: white; color: black;">
+                    
+                </div>
+                <div class="main-form" style="background-color: white; color: black;">
+                    
                 </div>
             </div>
-            <div></div>
         </main>
-        <footer>
+        <footer style="margin: auto;">
             <div class="wrapper">
                 <a href="https://vk.com/saveliy2015">
-                    <img src="../images/vk.PNG" alt="вк">
+                    <img class="icons" src="../images/vk.PNG" alt="вк">
                 </a>
                 <a href="">
-                    <img src="../images/inst.PNG" alt="инст">
+                    <img class="icons" src="../images/inst.PNG" alt="инст">
                 </a>
                 <a href="">
-                    <img src="../images/git.PNG" alt="гит">
+                    <img class="icons" src="../images/git.PNG" alt="гит">
                 </a>
             </div>
             <div class="wrapper">Сайтъ разработанъ Алимушкiнымъ Савелiемъ, Copyrighting C 2021</div>

@@ -5,18 +5,19 @@ body {
   line-height: 1.6;
   color:  white;
   margin: 0px;
-  background-color: rgb(6, 6, 39);
+  background-color: rgb(0,19,42);
 
 }
 
 .flex-nav{
   display: flex;
   justify-content: space-between;
-  background-color: rgb(6, 6, 39);
+  background-color: rgb(0,19,42);
   color: rgb(255, 255, 255); 
   align-items: center;
   list-style-type: "| ";
   margin-top: 0px;
+  margin-right: 50px;
 }
 .a-underline {
 	position: relative;
@@ -43,17 +44,17 @@ body {
 }
 header {
   padding: 150px;
-  background: center center / cover no-repeat url(/images/back.jpg);
+  background: center center / cover no-repeat url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v475-katie-108-abstractblackandwhitebg_1.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=b40987c47a3fc9ca2cb98a4c02a7c545);
   font-family: 'Press Start 2P', cursive;
   text-align: center;
   float: left 10%;
   max-width: 1200px;
   background-size: cover;
-  background-color: rgb(6, 6, 39);
+  background-color: rgb(0,19,42);
   margin: 0px auto;
 }
 main {
-  background-color: rgb(6, 6, 39);
+  background-color: rgb(0,19,42);
   font-family: 'Kelly Slab', cursive;
   margin: 0px auto;
 }
@@ -141,6 +142,7 @@ button{
   height: 230px;
   width: 230px;
   margin-top: 5%;
+  margin-bottom: 5%;
 }
 footer{
   margin-top: 30px;
@@ -159,7 +161,7 @@ td {
   margin-top: 10px;
 }
 .about_me-flex2{
-  background-color: rgb(6, 6, 39);
+  background-color: rgb(0,19,42);
   color: white;
   display: flex;
   justify-content: space-between;
@@ -192,6 +194,12 @@ td {
   border-radius: 5px;
   z-index: 100;
 }
+.icons{
+  height: 50px;
+  width: 50px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
 .block-choice{
   background-color: white;
   display: flex; flex-direction: row;
@@ -200,4 +208,35 @@ td {
 .theme{
   color: black; 
   margin-left: auto;
+}
+.grid-container{
+  display: grid;
+  justify-content: center;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2vw;
+  justify-items: center;
+  margin-top: 20px;
+}
+.border{
+  outline: darkgoldenrod;
+}
+.flex-body{
+  display: flex;
+  height: 105vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.input-bg{
+  background-color: rgb(37, 56, 143);
+  border-radius: 40px;
+  border-color: rgb(0,19,42);
+  color: whitesmoke;
+}
+.main-form{
+  width: 77%;
+  border: 7px solid rgb(37, 56, 143);
+  padding: 40px;
+  border-radius: 40px;
+  box-shadow: 3px rgb(0,19,42);
 }
