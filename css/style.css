@@ -240,3 +240,12 @@ td {
   border-radius: 40px;
   box-shadow: 3px rgb(0,19,42);
 }
+.flex-button{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.border-img{
+  border: 3px solid rgb(37, 56, 143);
+}

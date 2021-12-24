@@ -4,6 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        function ChangeColor (choice) {
+            var main = document.getElementById('qwe');
+            if(choice.id == 'dark' && choice.checked){
+                main.style.backgroundColor = rgb(0,19,42);
+            } else if (choice.id == 'light' && choice.checked){
+                main.style.backgroundColor = 'white';
+            }
+        }
+    </script>
+    <script>
+        a=3;
+        img=1;
+        function Auto_start()
+        {
+            TimerId = setInterval("Auto()", 2000);
+        }
+        function Auto_stop()
+        {
+            clearTimeout(TimerId);
+        }
+        function Auto()
+        {
+        ch(a);
+            if (a == 5)
+            {
+                a = 2;
+            }
+                a = a + 1;
+        }
+        function ch(a)
+        {
+            document.images[2].src= document.images[a].src;
+            document.images[img].classList.remove("border-img");
+            document.images[a].classList.add("border-img");
+            img=a;
+        }
+    </script> 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -62,16 +100,6 @@
                     <input style="margin-bottom: 20px;" type="checkbox"checked> <label for="">Фотогалерея</label><br>
                 </div>
                 <div class="wrapper theme">
-                    <script>
-                        function ChangeColor (choice) {
-                            var main = document.getElementById('qwe');
-                            if(choice.id == 'dark' && choice.checked){
-                                main.style.backgroundColor = rgb(0,19,42);
-                            } else if (choice.id == 'light' && choice.checked){
-                                main.style.backgroundColor = 'white';
-                            }
-                        }
-                    </script>
                     <h1>Тема страницы:</h1>
                     <label for="light"><input name="theme" type="radio" id="light" checked value="1" onchange="ChangeColor(this)">Светлая</label><br>
                     <label for="dark"><input name="theme" type="radio" id="dark" value="1" onchange="ChangeColor(this)">Тёмная</label><br>
@@ -168,7 +196,16 @@
                     </div>
                 </div>
                 <div class="main-form" style="background-color: white; color: black;">
-                    
+                    <div style="margin-left: 40px; margin-top: 50px;">
+                        <img style=" border: 3px solid rgb(37, 56, 143);" src="../images/111.jpg" width="414" alt="" class="border-galary"><br>
+                        <img src="../images/111.jpg" width="136" height="80" alt="img1" onclick="ch('3')" class="border-galary">
+                        <img src="../images/222.jpg" width="136" height="80" alt="img2" margin-left:2 onclick="ch('4')" class="border-galary">
+                        <img src="../images/333.jpeg" width="136" height="80" alt="img3" margin-left:2 onclick="ch('5')" class="border-galary"><br>
+                    </div>
+                    <div class="flex-button">
+                        <button style="width: 150px;" onclick="Auto_start()">Auto</button>
+                        <button style="width: 150px;" onclick="Auto_stop()">Stop</button>
+                    </div>
                 </div>
                 <div class="main-form" style="background-color: white; color: black;">
                     
