@@ -42,6 +42,7 @@
             img=a;
         }
     </script> 
+ 
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
@@ -92,12 +93,12 @@
         <main id="mainCol" style="background-color: white;">
             <div id="qwe" class="block-choice">
                 <div class="wrapper" style="color: black;">
-                    <input style="margin-top: 20px;" type="checkbox"checked> <label for="">Форма</label><br>
-                    <input type="checkbox"checked> <label for="">Диаграмма</label><br>
-                    <input type="checkbox"checked> <label for="">Текст+картинка</label><br>
-                    <input type="checkbox"checked> <label for="">Форма регистрации</label><br>
-                    <input type="checkbox"checked> <label for="">Поле ввода</label><br>
-                    <input style="margin-bottom: 20px;" type="checkbox"checked> <label for="">Фотогалерея</label><br>
+                    <input id="form" style="margin-top: 20px;" type="checkbox"checked> <label for="">Форма</label><br>
+                    <input id="diagr" type="checkbox"checked> <label for="">Диаграмма</label><br>
+                    <input id="txt" type="checkbox"checked> <label for="">Текст+картинка</label><br>
+                    <input id="reg" type="checkbox"checked> <label for="">Форма регистрации</label><br>
+                    <input id="localStorage" type="checkbox"checked> <label for="">Поле ввода</label><br>
+                    <input style="margin-bottom: 20px;" id="photos" type="checkbox"checked> <label for="">Фотогалерея</label><br>
                 </div>
                 <div class="wrapper theme">
                     <h1>Тема страницы:</h1>
@@ -128,7 +129,7 @@
                           mailing = document.reg.mailing.value;
                         }
                         console.log(mailing_console);
-                        
+
                       </script>
                     <form action="javascript:f()" method="GET" name="reg" class="border"> 
                         <div class="flex-b"> 
@@ -203,15 +204,47 @@
                         <img src="../images/333.jpeg" width="136" height="80" alt="img3" margin-left:2 onclick="ch('5')" class="border-galary"><br>
                     </div>
                     <div class="flex-button">
-                        <button style="width: 150px;" onclick="Auto_start()">Auto</button>
-                        <button style="width: 150px;" onclick="Auto_stop()">Stop</button>
+                        <button style="width: 150px;" onclick="Auto_start()">СТАРТ</button>
+                        <button style="width: 150px;" onclick="Auto_stop()">СТОП</button>
                     </div>
                 </div>
                 <div class="main-form" style="background-color: white; color: black;">
-                    
+                    <div>
+                        <input id="count">
+        <button id="canvasButton">Построить диаграмму</button>
+        <canvas  class = "c" id="canvas" width="500" height="200"></canvas> 
+                    </div>
+                    <script>
+
+                        
+                        let button = document.querySelector("#canvasButton");
+                        
+                        
+                        function Draw() {
+                            let number = Number(document.querySelector('#count').value);
+                            let art = document.querySelector("#canvas");
+                        
+                            let stylish = art.getContext('2d');
+                            stylish.clearRect(0, 0, canvas.width, canvas.height);
+                            stylish.fillStyle = '#171472';
+                            let t = 0;
+                            let i = 0;
+                        
+                            while(i!=number){
+                                stylish.fillRect(t, 200, 20, Math.floor(Math.random() * (-200)));
+                                i++;
+                                t+=25;
+                                }
+                            }
+                        
+                        button.addEventListener("click", Draw);
+                    </script>
                 </div>
                 <div class="main-form" style="background-color: white; color: black;">
-                    
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam vitae quis ut? Rem eaque possimus repellat qui quos reiciendis molestias dicta incidunt, nostrum repellendus minima praesentium dignissimos? Aperiam, obcaecati maxime! <br>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio expedita voluptatibus illo similique minima quas, consequuntur laborum, inventore porro, molestiae corporis libero accusamus voluptatum rem possimus quibusdam exercitationem ullam? Voluptas. <br>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora architecto ipsa enim voluptates quibusdam soluta maiores cum sit sequi, distinctio at doloremque dolorem aut molestiae iusto officia aperiam veritatis sunt! <br>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium quibusdam possimus aut mollitia explicabo cumque molestiae perferendis unde et doloremque eius suscipit ut provident, fuga quod at iste fugiat soluta.
                 </div>
             </div>
         </main>
